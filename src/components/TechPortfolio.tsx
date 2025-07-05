@@ -4,7 +4,8 @@ import Hero from './Hero';
 import Experience from './Experience';
 import TechStack from './TechStack';
 import Projects from './Projects';
-import Interests from './Interests';
+import Interests from './Interests'
+import Contact from './Contact';
 
 const TechPortfolio: React.FC = () => {
   return (
@@ -15,6 +16,7 @@ const TechPortfolio: React.FC = () => {
       <TechStack />
       <Projects isTech={true} />
       <Interests isTech={true} />
+      <Contact /> 
     </div>
   );
 };

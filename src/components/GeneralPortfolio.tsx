@@ -4,6 +4,7 @@ import Hero from './Hero';
 import Experience from './Experience';
 import Projects from './Projects';
 import Interests from './Interests';
+import Contact from './Contact';
 
 const GeneralPortfolio: React.FC = () => {
   return (
@@ -13,6 +14,7 @@ const GeneralPortfolio: React.FC = () => {
       <Experience />
       <Projects isTech={false} />
       <Interests isTech={false} />
+      <Contact /> 
     </div>
   );
 };
