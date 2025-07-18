@@ -1,6 +1,11 @@
 import React from "react";
-import { Download } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import CircularText from "./visuals/CircularText";
+import SplitText from "./visuals/SplitText";
+
+const handleAnimationComplete = () => {
+  console.log("All letters have animated!");
+};
 
 interface HeroProps {
   isTech: boolean;
@@ -13,7 +18,21 @@ const Hero: React.FC<HeroProps> = ({ isTech }) => {
         <div className="">
           <div className="flex justify-between">
             <div>
-              <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
+              <SplitText
+                text="Hi there, I'm Justin Mayer"
+                className="text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6 leading-tight"
+                delay={100}
+                duration={0.3}
+                ease="power3.out"
+                splitType="chars"
+                from={{ opacity: 0, y: 40 }}
+                to={{ opacity: 1, y: 0 }}
+                threshold={0.1}
+                rootMargin="-100px"
+                textAlign="center"
+                onLetterAnimationComplete={handleAnimationComplete}
+              />
+              {/* <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
                 <>
                   Hi, I'm
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
@@ -21,7 +40,7 @@ const Hero: React.FC<HeroProps> = ({ isTech }) => {
                     Justin Mayer
                   </span>
                 </>
-              </h1>
+              </h1> */}
 
               <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed max-w-2xl">
                 {isTech
@@ -31,11 +50,8 @@ const Hero: React.FC<HeroProps> = ({ isTech }) => {
 
               <div className="flex flex-wrap gap-4">
                 <button className="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors group cursor-pointer">
-                  Download Resume
-                  <Download className="w-4 h-4 ml-2" />
-                </button>
-                <button className="inline-flex items-center px-6 py-3 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 rounded-lg font-medium hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
-                  View Projects
+                  View Resume
+                  <ExternalLink className="w-4 h-4 ml-2" />
                 </button>
               </div>
             </div>

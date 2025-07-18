@@ -1,5 +1,14 @@
-import React from 'react';
-import { Camera, Music, Mountain, BookOpen, Gamepad2, Coffee, Plane, Code } from 'lucide-react';
+import React from "react";
+import { useState, useEffect } from "react";
+import GlareHover from "./visuals/GlareHover";
+import {
+  Dumbbell,
+  Brush,
+  Code,
+  CakeSlice,
+  Mountain,
+  Gamepad2,
+} from "lucide-react";
 
 interface InterestsProps {
   isTech: boolean;
@@ -8,68 +17,41 @@ interface InterestsProps {
 const Interests: React.FC<InterestsProps> = ({ isTech }) => {
   const interests = [
     {
-      title: "Photography",
-      icon: <Camera className="w-6 h-6" />,
-      description: isTech 
-        ? "Capturing moments through digital imagery, exploring composition and post-processing techniques."
-        : "Love capturing beautiful moments and exploring the world through my lens.",
-      color: "bg-purple-500"
+      title: "Fitness",
+      icon: <Dumbbell className="w-12 h-12" />,
+      description:
+        "Discovering science-backed methods & tricks to improve overall health, and going to gym",
     },
     {
-      title: "Music",
-      icon: <Music className="w-6 h-6" />,
-      description: isTech
-        ? "Audio engineering and music production, experimenting with digital audio workstations."
-        : "Playing guitar and discovering new artists across different genres.",
-      color: "bg-green-500"
+      title: "Baking",
+      icon: <CakeSlice className="w-12 h-12" />,
+      description:
+        "Creating delicious treats and experimenting with new recipes.",
     },
     {
       title: "Hiking",
-      icon: <Mountain className="w-6 h-6" />,
-      description: isTech
-        ? "Outdoor adventures and GPS tracking, combining technology with nature exploration."
-        : "Exploring nature trails and enjoying the great outdoors on weekends.",
-      color: "bg-blue-500"
-    },
-    {
-      title: "Reading",
-      icon: <BookOpen className="w-6 h-6" />,
-      description: isTech
-        ? "Technical books, programming guides, and staying updated with industry trends."
-        : "Fiction, biographies, and personal development books.",
-      color: "bg-orange-500"
+      icon: <Mountain className="w-12 h-12" />,
+      description:
+        "Exploring nature trails and enjoying the great outdoors on weekends.",
     },
     {
       title: "Gaming",
-      icon: <Gamepad2 className="w-6 h-6" />,
-      description: isTech
-        ? "Game development and interactive media, exploring game engines and mechanics."
-        : "Casual gaming and enjoying immersive storytelling experiences.",
-      color: "bg-red-500"
+      icon: <Gamepad2 className="w-12 h-12" />,
+      description:
+        "Casual gaming and enjoying immersive storytelling experiences.",
     },
     {
-      title: "Coffee",
-      icon: <Coffee className="w-6 h-6" />,
-      description: isTech
-        ? "Precision brewing methods and coffee data analysis for optimal extraction."
-        : "Exploring different coffee cultures and brewing techniques.",
-      color: "bg-amber-600"
-    }
+      title: "Drawing",
+      icon: <Brush className="w-12 h-12" />,
+      description: "Occasional abstract sketching, just to pass time.",
+    },
   ];
 
   if (isTech) {
     interests.push({
-      title: "Open Source",
-      icon: <Code className="w-6 h-6" />,
-      description: "Contributing to open source projects and building developer tools for the community.",
-      color: "bg-indigo-500"
-    });
-  } else {
-    interests.push({
-      title: "Travel",
-      icon: <Plane className="w-6 h-6" />,
-      description: "Exploring different cultures and cuisines around the world.",
-      color: "bg-teal-500"
+      title: "Coding",
+      icon: <Code className="w-12 h-12" />,
+      description: "Learning programming concepts and building small projects.",
     });
   }
 
@@ -77,18 +59,42 @@ const Interests: React.FC<InterestsProps> = ({ isTech }) => {
     <section className="py-20 bg-gray-50 dark:bg-gray-800 transition-colors duration-300">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Hobbies & Interests</h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300">What I enjoy doing in my free time</p>
+          <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            Hobbies & Interests
+          </h2>
+          <p className="text-xl text-gray-600 dark:text-gray-300">
+            What I enjoy doing in my free time
+          </p>
         </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {interests.map((interest, index) => (
-            <div key={index} className="bg-white dark:bg-gray-900 rounded-xl p-6 hover:shadow-lg dark:hover:shadow-2xl transition-all duration-300 group">
-              <div className={`${interest.color} text-white p-3 rounded-lg w-fit mb-4 group-hover:scale-110 transition-transform`}>
-                {interest.icon}
-              </div>
-              <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">{interest.title}</h3>
-              <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">{interest.description}</p>
+            <div key={index}>
+              <GlareHover
+                className="bg-white dark:bg-gray-900"
+                background="bg-white"
+                glareColor="#ffffff"
+                width="100%"
+                height="100%"
+                glareOpacity={0.3}
+                glareAngle={-30}
+                glareSize={300}
+                transitionDuration={800}
+                playOnce={false}
+              >
+                <div className="bg-white dark:bg-gray-900 rounded-xl p-6 hover:shadow-lg dark:hover:shadow-2xl transition-all duration-300 group">
+                  <div
+                    className={`text-white p-3 rounded-lg w-fit mb-4 group-hover:scale-110 transition-transform`}
+                  >
+                    {interest.icon}
+                  </div>
+                  <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
+                    {interest.title}
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+                    {interest.description}
+                  </p>
+                </div>
+              </GlareHover>
             </div>
           ))}
         </div>

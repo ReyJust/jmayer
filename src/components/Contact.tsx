@@ -16,13 +16,6 @@ const Contact: React.FC = () => {
       value: "+1 (555) 123-4567",
       href: "tel:+15551234567",
       color: "bg-green-500"
-    },
-    {
-      icon: <MapPin className="w-6 h-6" />,
-      label: "Location",
-      value: "San Francisco, CA",
-      href: "#",
-      color: "bg-red-500"
     }
   ];
 
@@ -40,13 +33,6 @@ const Contact: React.FC = () => {
       username: "Your Name",
       href: "https://linkedin.com/in/yourprofile",
       color: "bg-blue-600"
-    },
-    {
-      icon: <Twitter className="w-6 h-6" />,
-      label: "Twitter",
-      username: "@yourusername",
-      href: "https://twitter.com/yourusername",
-      color: "bg-sky-500"
     }
   ];
 
@@ -105,14 +91,7 @@ const Contact: React.FC = () => {
                 </a>
               ))}
             </div>
-            
-            <div className="mt-8 p-6 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-xl border border-blue-100 dark:border-blue-800">
-              <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Let's Collaborate</h4>
-              <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
-                Whether you're looking to hire, collaborate on a project, or just want to connect, I'd love to hear from you. 
-                Feel free to reach out through any of the channels above!
-              </p>
-            </div>
+          
           </div>
         </div>
       </div>
