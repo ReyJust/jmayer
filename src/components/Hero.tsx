@@ -3,10 +3,6 @@ import { ExternalLink } from "lucide-react";
 import CircularText from "./visuals/CircularText";
 import SplitText from "./visuals/SplitText";
 
-const handleAnimationComplete = () => {
-  console.log("All letters have animated!");
-};
-
 interface HeroProps {
   isTech: boolean;
 }
@@ -30,7 +26,6 @@ const Hero: React.FC<HeroProps> = ({ isTech }) => {
                 threshold={0.1}
                 rootMargin="-100px"
                 textAlign="center"
-                onLetterAnimationComplete={handleAnimationComplete}
               />
               {/* <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
                 <>
