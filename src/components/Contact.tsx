@@ -1,7 +1,11 @@
 import React from "react";
 import { Mail, Phone, MapPin, Github, Linkedin, Twitter } from "lucide-react";
 
-const Contact: React.FC = () => {
+interface InterestsProps {
+  isTech: boolean;
+}
+
+const Contact: React.FC = ({ isTech }) => {
   const contactInfo = [
     {
       icon: <Mail className="w-6 h-6" />,
@@ -21,13 +25,6 @@ const Contact: React.FC = () => {
 
   const socialLinks = [
     {
-      icon: <Github className="w-6 h-6" />,
-      label: "GitHub",
-      username: "@ReyJust",
-      href: "https://github.com/ReyJust",
-      color: "bg-gray-800 dark:bg-gray-600",
-    },
-    {
       icon: <Linkedin className="w-6 h-6" />,
       label: "LinkedIn",
       username: "Justin Mayer",
@@ -35,6 +32,16 @@ const Contact: React.FC = () => {
       color: "bg-blue-600",
     },
   ];
+
+  if (isTech) {
+    socialLinks.push({
+      icon: <Github className="w-6 h-6" />,
+      label: "GitHub",
+      username: "@ReyJust",
+      href: "https://github.com/ReyJust",
+      color: "bg-gray-800 dark:bg-gray-600",
+    });
+  }
 
   return (
     <section className="py-20 bg-white dark:bg-gray-900 transition-colors duration-300">

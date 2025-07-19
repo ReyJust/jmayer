@@ -49,7 +49,7 @@ const TechPortfolio: React.FC = () => {
       {/* <Projects isTech={true} /> */}
       <WebsitePortfolio />
       <Interests isTech={true} />
-      <Contact />
+      <Contact isTech={true} />
       <CTA />
       <Footer />
     </div>
