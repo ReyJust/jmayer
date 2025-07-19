@@ -82,14 +82,16 @@ const Interests: React.FC<InterestsProps> = ({ isTech }) => {
                 playOnce={false}
               >
                 <div className="bg-white dark:bg-gray-900 rounded-xl p-6 hover:shadow-lg dark:hover:shadow-2xl transition-all duration-300 group">
-                  <div
-                    className={`text-white p-3 rounded-lg w-fit mb-4 group-hover:scale-110 transition-transform`}
-                  >
-                    {interest.icon}
+                  <div className="flex flex-col items-center  mb-4">
+                    <div
+                      className={`text-white p-3 rounded-lg w-fit group-hover:scale-110 transition-transform`}
+                    >
+                      {interest.icon}
+                    </div>
+                    <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
+                      {interest.title}
+                    </h3>
                   </div>
-                  <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
-                    {interest.title}
-                  </h3>
                   <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
                     {interest.description}
                   </p>
