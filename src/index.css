@@ -1,6 +1,15 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
 
+html, body {
+  overscroll-behavior: none;
+  background-color: white;
+}
+
+.dark html, .dark body {
+  background-color: #111827;
+}
+
 @keyframes shine {
   0% {
     background-position: 100%;
