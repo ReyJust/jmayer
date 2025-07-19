@@ -20,13 +20,13 @@ const Interests: React.FC<InterestsProps> = ({ isTech }) => {
       title: "Fitness",
       icon: <Dumbbell className="w-12 h-12" />,
       description:
-        "Discovering science-backed methods & tricks to improve overall health, and going to gym",
+        "I enjoy discovering science-based ways to improve my health and staying consistent with my gym routine",
     },
     {
       title: "Baking",
       icon: <CakeSlice className="w-12 h-12" />,
       description:
-        "Creating delicious treats and experimenting with new recipes.",
+        "Baking is a disciplined art form that combines creativity with precision. For me, it's relaxing, especially when shared",
     },
     {
       title: "Hiking",
@@ -43,7 +43,7 @@ const Interests: React.FC<InterestsProps> = ({ isTech }) => {
     {
       title: "Drawing",
       icon: <Brush className="w-12 h-12" />,
-      description: "Occasional abstract sketching, just to pass time.",
+      description: "Occasional abstract sketching as a casual way to unwind",
     },
   ];
 
