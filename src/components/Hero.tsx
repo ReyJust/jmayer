@@ -44,8 +44,8 @@ const Hero: React.FC<HeroProps> = ({ isTech }) => {
 
               <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed max-w-2xl">
                 {isTech
-                  ? "Full-stack software engineer with a passion for creating scalable, maintainable solutions. I love tackling complex problems and building products that make a difference."
-                  : "I'm a creative problem-solver who enjoys bringing innovative ideas to life through technology. Let's build something amazing together."}
+                  ? "Experienced Software engineer who loves using technology to solve real-life problems, streamline everyday tasks, and keep learning along the way. I care about building things that make life easier for everyone."
+                  : "  I believe meaningful work starts with strong values—empathy, curiosity, and integrity. I naturally bring technology into my life and work to improve the way we live, connect, and grow."}
               </p>
 
               <div className="flex flex-wrap gap-4">
