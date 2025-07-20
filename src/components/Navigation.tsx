@@ -3,13 +3,13 @@ import { useNavigate, useLocation } from "react-router-dom";
 import {
   Code,
   User,
-  Download,
   Github,
   Linkedin,
   Mail,
   Notebook,
 } from "lucide-react";
 import ThemeToggle from "./ThemeToggle";
+import resumePdf from "../assets/resume.pdf";
 
 const Navigation: React.FC = () => {
   const navigate = useNavigate();
@@ -62,7 +62,9 @@ const Navigation: React.FC = () => {
             <div className="flex items-center space-x-3">
               <ThemeToggle />
               <a
-                href="#"
+                href={resumePdf}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                 title="View Resume"
               >

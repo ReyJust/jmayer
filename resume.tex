@@ -1,0 +1,155 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+
+\begin{center}
+    {\Huge \scshape Justin Mayer} \\ \vspace{1pt}
+    \small Port Louis, Mauritius \\
+    \raisebox{-0.1\height}\faPhone\ (+230) 5 921 3244 ~ \href{mailto:jusmayer@outlook.com}{\raisebox{-0.2\height}\faEnvelope\  jusmayer@outlook.com} \\
+    \href{https://www.linkedin.com/in/jpjmayer/}{\raisebox{-0.2\height}\faLinkedin\ linkedin.com/in/jpjmayer} ~
+    \href{https://github.com/ReyJust}{\raisebox{-0.2\height}\faGithub\ github.com/ReyJust}
+    \vspace{-8pt}
+\end{center}
+
+\section{Professional Summary}
+\begin{center}
+\small{Experienced Software Engineer with 5+ years developing full-stack web applications and data solutions. Proven expertise in TypeScript, VueJS, NodeJS, and Python with strong background in e-commerce plugins, data analytics, and scalable system architecture. Demonstrated ability to deliver end-to-end solutions from WordPress plugins to complex data pipelines, with focus on performance optimisation and user experience.}
+\end{center}
+\vspace{-10pt}
+
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Bachelor of Computer Science (Hons) (Systems Engineering)}{2020 -- 2023}
+      {Middlesex University of Mauritius}{Cascavelle, Mauritius}
+      \resumeItemListStart
+        \resumeItem{Relevant Coursework: Information in Organisations (SQL), Computer Systems Architecture and Operation Systems, Programming for Data Communication and Networks, Web Application and Databases, Software Engineering Management and Development (C++), Advanced Web Development with Big Data, User Experience (UX) Design, Business Intelligence}
+        \resumeItem{Capstone Project: Specimen counting mobile application for mass rearing insect farms}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Software Engineer}{2021 -- 2026}
+      {Dodobird.ai}{Mauritius}
+      \resumeItemListStart
+        \resumeItem{Developed client websites and web applications with focus on performance optimisation and user experience}
+        \resumeItem{Built Shopify and Nopcommerce plugins for e-commerce integration}
+        \resumeItem{Implemented comprehensive full-stack VueJS application with NodeJS backend utilising Express, TypeScript, and PostgreSQL}
+        \resumeItem{Developed flexible \& source agnostic data ingestion pipeline for CRM utilising Kedro scheduled with Apache Airflow}
+        \resumeItem{Created WordPress plugin to display AI recommendations \& embed VueJS chatbot for enhanced user engagement}
+        \resumeItem{Implemented queue system for batch emailing with BullMQ including mock development with MailHog}
+        \resumeItem{Performed comprehensive data analytics \& manipulations utilising Pandas, Jupyter Notebook and Matplotlib}
+        \resumeItem{Developed bulk data import feature with queueing system}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Part Time Web Developer}{2023 -- 2026}
+      {BlueBoa Ltd}{Mauritius}
+      \resumeItemListStart
+        \resumeItem{Crafted multiple websites from Figma designs using WordPress theme development, Full Site Block Editor, and Elementor builder}
+        \resumeItem{Implemented multi-threaded Python web scraping solution for sites with 10,000+ pages}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+\section{Key Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Programming Languages}{: TypeScript, JavaScript, Python, C++, SQL, HTML, CSS} \\
+     \textbf{Frameworks \& Libraries}{: VueJS, NodeJS, Express, React, WordPress} \\
+     \textbf{Databases}{: PostgreSQL, MySQL} \\
+     \textbf{Tools \& Technologies}{: Apache Airflow, Kedro, BullMQ, MailHog, AWS, Git, Jupyter Notebook} \\
+     \textbf{Data Analysis}{: Pandas, Matplotlib, Business Intelligence} \\
+     \textbf{Specialisations}{: Full-stack development, Plugin development, Web scraping, Queue systems, Performance optimisation}
+    }}
+ \end{itemize}
+
+\end{document}

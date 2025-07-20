@@ -2,6 +2,7 @@ import React from "react";
 import { ExternalLink } from "lucide-react";
 import CircularText from "./visuals/CircularText";
 import SplitText from "./visuals/SplitText";
+import resumePdf from "../assets/resume.pdf";
 
 interface HeroProps {
   isTech: boolean;
@@ -44,10 +45,15 @@ const Hero: React.FC<HeroProps> = ({ isTech }) => {
               </p>
 
               <div className="flex flex-wrap gap-4">
-                <button className="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors group cursor-pointer">
+                <a 
+                  href={resumePdf}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors group"
+                >
                   View Resume
                   <ExternalLink className="w-4 h-4 ml-2" />
-                </button>
+                </a>
               </div>
             </div>
             <div className="flex-1 content-center">
