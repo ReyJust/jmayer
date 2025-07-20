@@ -1,5 +1,13 @@
 import React, { useState } from "react";
 import { ExternalLink, Globe } from "lucide-react";
+import plantyImg from "../assets/websites/planty.png";
+import sixlegsImg from "../assets/websites/sixlegs.png";
+import blueboaImg from "../assets/websites/blueboa.png";
+import maisoncorsonImg from "../assets/websites/maisoncorson.png";
+import offgridImg from "../assets/websites/offgrid.png";
+import greenAmelysImg from "../assets/websites/green-amelys.png";
+import lafiImg from "../assets/websites/lafi.png";
+import techservImg from "../assets/websites/techserv.png";
 
 const WebsitePortfolio: React.FC = () => {
   const [imageErrors, setImageErrors] = useState<Set<number>>(new Set());
@@ -8,55 +16,55 @@ const WebsitePortfolio: React.FC = () => {
       title: "Planty",
       year: "2024",
       url: "https://plantymauritius.com/",
-      preview: "/jmayer/src/assets/websites/planty.png",
+      preview: plantyImg,
     },
     {
       title: "SixLegs",
       year: "2025",
       url: "https://sixlegs-ltd.com/",
-      preview: "/jmayer/src/assets/websites/sixlegs.png",
+      preview: sixlegsImg,
     },
     {
       title: "Blue Boa Ltd",
       year: "2024",
       url: "https://blue-boa.com/",
-      preview: "/jmayer/src/assets/websites/blueboa.png",
+      preview: blueboaImg,
     },
     {
       title: "North Coast Designs",
       year: "2025",
       url: "https://sixlegs-ltd.com/",
-      preview: "/jmayer/src/assets/websites/sixlegs.png",
+      preview: sixlegsImg,
     },
     {
       title: "Maison Corson",
       year: "2025",
       url: "https://lamaisoncorson.com/",
-      preview: "/jmayer/src/assets/websites/maisoncorson.png",
+      preview: maisoncorsonImg,
     },
     {
       title: "Offgrid",
       year: "2025",
       url: "https://offgrid.mu",
-      preview: "/jmayer/src/assets/websites/offgrid.png",
+      preview: offgridImg,
     },
     {
       title: "Green Amelys",
       year: "2024",
       url: "https://greenamelys.mu/",
-      preview: "/jmayer/src/assets/websites/green-amelys.png",
+      preview: greenAmelysImg,
     },
     {
       title: "Lafi",
       year: "2023",
       url: "https://lafi.mu/",
-      preview: "/jmayer/src/assets/websites/lafi.png",
+      preview: lafiImg,
     },
     {
       title: "TechServ Ltd",
       year: "2019",
       url: "https://techserv.mu",
-      preview: "/jmayer/src/assets/websites/techserv.png",
+      preview: techservImg,
     },
   ];
 

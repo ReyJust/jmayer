@@ -1,11 +1,11 @@
 import React from "react";
-import { Mail, Phone, MapPin, Github, Linkedin, Twitter } from "lucide-react";
+import { Mail, Phone, Github, Linkedin } from "lucide-react";
 
-interface InterestsProps {
+interface ContactProps {
   isTech: boolean;
 }
 
-const Contact: React.FC = ({ isTech }) => {
+const Contact: React.FC<ContactProps> = ({ isTech }) => {
   const contactInfo = [
     {
       icon: <Mail className="w-6 h-6" />,

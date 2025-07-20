@@ -50,7 +50,7 @@ const GeneralPortfolio: React.FC = () => {
       {/* <Projects isTech={false} /> */}
       <WebsitePortfolio />
       <Interests isTech={false} />
-      <Contact />
+      <Contact isTech={false} />
       <CTA />
       <Footer />
     </div>
