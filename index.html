@@ -1,12 +1,26 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/jmayer/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React + TS</title>
-    <script type="module" crossorigin src="/jmayer/assets/index-BaDkGQXH.js"></script>
-    <link rel="stylesheet" crossorigin href="/jmayer/assets/index-D8b4DHJx.css">
+    <title>Justin Mayer</title>
+    <script>
+      // Prevent FOUC (Flash of Unstyled Content)
+      (function () {
+        const theme = localStorage.getItem("theme");
+        const systemDark = window.matchMedia(
+          "(prefers-color-scheme: dark)"
+        ).matches;
+        const shouldBeDark = theme === "dark" || (!theme && systemDark);
+
+        if (shouldBeDark) {
+          document.documentElement.classList.add("dark");
+        }
+      })();
+    </script>
+    <script type="module" crossorigin src="/jmayer/assets/index-B-EllZZT.js"></script>
+    <link rel="stylesheet" crossorigin href="/jmayer/assets/index-BBYbxbP9.css">
   </head>
   <body>
     <div id="root"></div>
