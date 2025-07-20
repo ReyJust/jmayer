@@ -23,7 +23,7 @@ const Education: React.FC = () => {
         "Advanced Web Development with Big Data",
         "User Experience (UX) Design",
         "Business Intelligence",
-        "Undergraduate Individual Project - Speciment counting mobile application for mass rearing insect farms",
+        "Undergraduate Individual Project - Specimen counting mobile application for mass rearing insect farms",
       ],
     },
   ];

@@ -13,6 +13,7 @@ const Experience: React.FC = () => {
     {
       title: "Software Engineer",
       company: "Dodobird.ai",
+      link: "https://www.linkedin.com/company/dodobird-ai/",
       location: "Mauritius",
       period: "2021 - 2026",
       description:
@@ -29,10 +30,12 @@ const Experience: React.FC = () => {
       //   "WordPress",
       // ],
       achievements: [
+        "Shopify plugin",
+        "Nopcommerce plugin",
         "General Data Analytics & Manipulations using Pandas, Jupyter Notebook and Matplotlib",
         "Flexible & source agnostic data ingestion pipeline for CRM with Kedro scheduled with Apache Airflow",
         "Developed a WordPress plugin to display AI recommendations & embed a VueJs chatbot",
-        "Comprehensive Full-stack development of a VueJs app with Node.Js back using express and typescript.",
+        "Comprehensive Full-stack development of a VueJS app with NodeJs back using Express JS, Typescript and PostgreSQL",
         "Queue system for batch emailing with BullMQ including mock development with MailHog",
         "Bulk data import feature with queueing system",
       ],
@@ -40,6 +43,7 @@ const Experience: React.FC = () => {
     {
       title: "Part Time Web Developer",
       company: "BlueBoa Ltd",
+      link: "https://www.linkedin.com/company/blue-boa-ei-ltd/",
       location: "Mauritius",
       period: "2023 - 2026",
       description: "",
@@ -81,10 +85,15 @@ const Experience: React.FC = () => {
                     <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
                       {exp.title}
                     </h3>
-                    <div className="flex items-center text-blue-600 dark:text-blue-400 font-medium mb-2">
+                    <a
+                      href={exp.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center text-blue-600 dark:text-blue-400 font-medium mb-2 hover:text-blue-700 dark:hover:text-blue-300 transition-colors"
+                    >
                       <span>{exp.company}</span>
                       <ExternalLink className="w-4 h-4 ml-2" />
-                    </div>
+                    </a>
                     <div className="flex flex-wrap gap-4 text-sm text-gray-600 dark:text-gray-400">
                       <div className="flex items-center">
                         <Calendar className="w-4 h-4 mr-1" />
@@ -116,7 +125,7 @@ const Experience: React.FC = () => {
                     ))}
                   </ul>
                 </div>
-                <div className="flex flex-wrap gap-2">
+                {/* <div className="flex flex-wrap gap-2">
                   {exp.technologies.map((tech, i) => (
                     <span
                       key={i}
@@ -125,7 +134,7 @@ const Experience: React.FC = () => {
                       {tech}
                     </span>
                   ))}
-                </div>
+                </div> */}
               </SpotlightCard>
             </div>
           ))}
