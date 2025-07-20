@@ -11,12 +11,9 @@ import WebsitePortfolio from "./WebsitePortfolio";
 import DotGrid from "./visuals/DotGrid";
 import Footer from "./Footer";
 
-// import SplashCursor from "./SplashCursor";
-
 const GeneralPortfolio: React.FC = () => {
   return (
     <div className="min-h-screen">
-      {/* <SplashCursor /> */}
       <Navigation />
       <Hero isTech={false} />
       <div className="relative">
