@@ -72,15 +72,15 @@ const WebsitePortfolio: React.FC = () => {
     <section className="py-20 bg-gray-50 dark:bg-gray-800 transition-colors duration-300">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
             Website Portfolio
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300">
+          <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300">
             Websites I made as a web developer
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {websites.map((website, index) => (
             <div
               key={index}
@@ -116,9 +116,9 @@ const WebsitePortfolio: React.FC = () => {
                 </div>
               </div>
 
-              <div className="p-6">
+              <div className="p-4 sm:p-6">
                 <div className="flex items-center justify-between">
-                  <h3 className="text-lg font-bold text-gray-900 dark:text-white">
+                  <h3 className="text-base sm:text-lg font-bold text-gray-900 dark:text-white">
                     {website.title}
                   </h3>
                   <span className="text-sm text-gray-500 dark:text-gray-400">

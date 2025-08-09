@@ -59,15 +59,15 @@ const Experience: React.FC = () => {
     <section className="py-20 bg-transparent transition-colors duration-300">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
-          <BriefcaseBusiness className="w-16 h-16 text-gray-900 dark:text-white mb-4 m-auto" />
+          <BriefcaseBusiness className="w-12 h-12 sm:w-16 sm:h-16 text-gray-900 dark:text-white mb-4 m-auto" />
           <ShinyText
             text="Work Experience"
             disabled={false}
             speed={2}
-            className="text-4xl font-bold mb-4"
+            className="text-3xl sm:text-4xl font-bold mb-4"
           />
 
-          <p className="text-xl text-gray-600 dark:text-gray-300">
+          <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300">
             My professional journey
           </p>
         </div>
@@ -76,13 +76,13 @@ const Experience: React.FC = () => {
           {experiences.map((exp, index) => (
             <div key={index} className="relative">
               <SpotlightCard
-                className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl p-8 hover:shadow-lg dark:hover:shadow-2xl transition-all duration-300"
+                className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl p-6 sm:p-8 hover:shadow-lg dark:hover:shadow-2xl transition-all duration-300"
                 spotlightColor="rgba(0, 229, 255, 0.2)"
               >
                 {" "}
                 <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-6">
                   <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+                    <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-2">
                       {exp.title}
                     </h3>
                     <a

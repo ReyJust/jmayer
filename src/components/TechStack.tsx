@@ -90,19 +90,19 @@ const TechStack: React.FC = () => {
 
       <div className="max-w-6xl mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
             Technology Stack
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300">
+          <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300">
             Tools and technologies I worked with
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {categories.map((category, index) => (
             <div
               key={index}
-              className="bg-white dark:bg-gray-900 rounded-xl p-8 hover:shadow-lg dark:hover:shadow-2xl transition-all duration-300 relative z-10"
+              className="bg-white dark:bg-gray-900 rounded-xl p-6 sm:p-8 hover:shadow-lg dark:hover:shadow-2xl transition-all duration-300 relative z-10"
             >
               <div className="flex items-center mb-6">
                 <div

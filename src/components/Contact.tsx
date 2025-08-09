@@ -47,19 +47,19 @@ const Contact: React.FC<ContactProps> = ({ isTech }) => {
     <section className="py-20 bg-white dark:bg-gray-900 transition-colors duration-300">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
             Get In Touch
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
             I'm always open to discussing new opportunities, interesting
             projects, or just having a chat about technology.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12">
           {/* Contact Information */}
           <div>
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">
+            <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-6 sm:mb-8">
               Contact Information
             </h3>
             <div className="space-y-6">
@@ -89,7 +89,7 @@ const Contact: React.FC<ContactProps> = ({ isTech }) => {
 
           {/* Social Links */}
           <div>
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">
+            <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-6 sm:mb-8">
               Connect With Me
             </h3>
             <div className="space-y-6">
