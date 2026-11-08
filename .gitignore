@@ -23,3 +23,7 @@ build/
 *.njsproj
 *.sln
 *.sw?
+
+# LaTeX build output (root only; src/assets/resume.pdf stays tracked)
+/resume.pdf
+*.synctex.gz

@@ -4,7 +4,7 @@
 mkdir -p build
 
 # Compile LaTeX to PDF in build directory
-pdflatex -output-directory=build "$1"
+tectonic -o build "$1"
 
 # Copy PDF to src/assets directory for web serving
 if [ -f "build/${1%.tex}.pdf" ]; then

@@ -1,4 +1,4 @@
-\documentclass[letterpaper,11pt]{article}
+\documentclass[a4paper,11pt]{article}
 
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
@@ -13,9 +13,12 @@
 \usepackage{tabularx}
 \usepackage{fontawesome5}
 \usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{ragged2e}
 \setlength{\multicolsep}{-3.0pt}
 \setlength{\columnsep}{-1pt}
-\input{glyphtounicode}
+\usepackage{iftex}
+\ifPDFTeX\input{glyphtounicode}\fi
 
 \pagestyle{fancy}
 \fancyhf{}
@@ -39,7 +42,7 @@
   \vspace{-4pt}\scshape\raggedright\large\bfseries
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
-\pdfgentounicode=1
+\ifPDFTeX\pdfgentounicode=1\fi
 
 \newcommand{\resumeItem}[1]{
   \item\small{
@@ -75,6 +78,13 @@
     \end{tabular*}\vspace{-7pt}
 }
 
+\newcommand{\resumeSingleHeading}[2]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+    \end{tabular*}\vspace{-4pt}
+}
+
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
 
 \renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
@@ -82,74 +92,115 @@
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[itemsep=2pt, topsep=3pt, parsep=0pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{4pt}}
 
 \begin{document}
 
-\begin{center}
-    {\Huge \scshape Justin Mayer} \\ \vspace{1pt}
-    \small Port Louis, Mauritius \\
-    \raisebox{-0.1\height}\faPhone\ (+230) 5 921 3244 ~ \href{mailto:jusmayer@outlook.com}{\raisebox{-0.2\height}\faEnvelope\  jusmayer@outlook.com} \\
-    \href{https://www.linkedin.com/in/jpjmayer/}{\raisebox{-0.2\height}\faLinkedin\ linkedin.com/in/jpjmayer} ~
-    \href{https://github.com/ReyJust}{\raisebox{-0.2\height}\faGithub\ github.com/ReyJust}
-    \vspace{-8pt}
-\end{center}
+\newcommand{\contactIcon}[1]{\makebox[1.7em][l]{\raisebox{-0.15\height}{\large #1}}}
+\begin{minipage}[c]{1.15in}
+    \includegraphics[width=1.15in, height=1.15in, keepaspectratio]{resume_photo.jpg}
+\end{minipage}%
+\hspace{0.25in}%
+\begin{minipage}[c]{\dimexpr\textwidth-1.4in\relax}
+    {\Huge \scshape Justin Mayer} \\[2pt]
+    {\Large \textit{Software Engineer}} \\[6pt]
+    \small
+    \begin{tabular}{@{}p{2.4in}l@{}}
+      \contactIcon{\faPhone} +230 5921 3244 &
+      \href{mailto:jusmayer@outlook.com}{\contactIcon{\faEnvelope} jusmayer@outlook.com} \\[2pt]
+      \href{https://www.linkedin.com/in/jpjmayer/}{\contactIcon{\faLinkedin} jpjmayer} &
+      \href{https://github.com/ReyJust}{\contactIcon{\faGithub} ReyJust} \\
+    \end{tabular}
+\end{minipage}
+\vspace{-4pt}
 
 \section{Professional Summary}
-\begin{center}
-\small{Experienced Software Engineer with 5+ years developing full-stack web applications and data solutions. Proven expertise in TypeScript, VueJS, NodeJS, and Python with strong background in e-commerce plugins, data analytics, and scalable system architecture. Demonstrated ability to deliver end-to-end solutions from WordPress plugins to complex data pipelines, with focus on performance optimisation and user experience.}
-\end{center}
-\vspace{-10pt}
-
-\section{Education}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {Bachelor of Computer Science (Hons) (Systems Engineering)}{2020 -- 2023}
-      {Middlesex University of Mauritius}{Cascavelle, Mauritius}
-      \resumeItemListStart
-        \resumeItem{Relevant Coursework: Information in Organisations (SQL), Computer Systems Architecture and Operation Systems, Programming for Data Communication and Networks, Web Application and Databases, Software Engineering Management and Development (C++), Advanced Web Development with Big Data, User Experience (UX) Design, Business Intelligence}
-        \resumeItem{Capstone Project: Specimen counting mobile application for mass rearing insect farms}
-      \resumeItemListEnd
-  \resumeSubHeadingListEnd
+{\justifying\small Software Engineer with 4+ years building full-stack web applications, background processing systems and data pipelines with TypeScript and Python. Delivers end to end, from email queues handling thousands of messages daily to a 50\% faster dashboard and stack-wide observability with OpenTelemetry, and gets up to speed quickly in existing codebases. Growing focus on AI: LLM tool-calling chatbots and document AI features, with AI-assisted development as part of the daily workflow.\par}
+\small
+\vspace{-6pt}
 
 \section{Experience}
   \resumeSubHeadingListStart
 
+    \resumeSingleHeading
+      {Career Break \textnormal{-- \textit{Working Holiday, Australia}}}{Feb 2026 -- Dec 2026}
+
     \resumeSubheading
-      {Software Engineer}{2021 -- 2026}
-      {Dodobird.ai}{Mauritius}
+      {Software Engineer}{Jan 2025 -- Dec 2025}
+      {LeadsCloser.ai}{}
       \resumeItemListStart
-        \resumeItem{Developed client websites and web applications with focus on performance optimisation and user experience}
-        \resumeItem{Built Shopify and Nopcommerce plugins for e-commerce integration}
-        \resumeItem{Implemented comprehensive full-stack VueJS application with NodeJS backend utilising Express, TypeScript, and PostgreSQL}
-        \resumeItem{Developed flexible \& source agnostic data ingestion pipeline for CRM utilising Kedro scheduled with Apache Airflow}
-        \resumeItem{Created WordPress plugin to display AI recommendations \& embed VueJS chatbot for enhanced user engagement}
-        \resumeItem{Implemented queue system for batch emailing with BullMQ including mock development with MailHog}
-        \resumeItem{Performed comprehensive data analytics \& manipulations utilising Pandas, Jupyter Notebook and Matplotlib}
-        \resumeItem{Developed bulk data import feature with queueing system}
+        \resumeItem{Led frontend refactor of a web application using modern UI frameworks (shadcn/ui), improving maintainability and UX consistency}
+        \resumeItem{Containerized the application with Docker, simplifying CI/CD pipelines and making environments quick to set up and reproduce}
+        \resumeItem{Implemented OpenTelemetry across the stack with a self-hosted Grafana LGTM backend (Prometheus, Tempo, Loki), tracing requests end to end across interconnected services and adding alerts that sped up debugging and improved uptime}
+        \resumeItem{Designed and improved distributed background processing using BullMQ and Redis for asynchronous processing of thousands of emails daily}
+        \resumeItem{Built APIs and LangChain tools for an AI-powered chatbot (Python, FastAPI) with a Vue.js frontend, working across the full conversation cycle from user message to tool calls and response}
+        \resumeItem{Optimized backend performance through SQL procedure development, in-database cron jobs, and query tuning, improving dashboard performance by 50\%}
+        \resumeItem{Developed scalable web scraping pipelines to extract data from dozens of websites in parallel}
+        \resumeItem{Developed Oracle APEX applications, writing SQL procedures and backend logic}
       \resumeItemListEnd
 
     \resumeSubheading
-      {Part Time Web Developer}{2023 -- 2026}
-      {BlueBoa Ltd}{Mauritius}
+      {Freelance WordPress Developer}{2023 -- 2026}
+      {BlueBoa Ltd, Catamaran Cruises and others}{Part-time}
       \resumeItemListStart
-        \resumeItem{Crafted multiple websites from Figma designs using WordPress theme development, Full Site Block Editor, and Elementor builder}
-        \resumeItem{Implemented multi-threaded Python web scraping solution for sites with 10,000+ pages}
+        \resumeItem{Built around 8 landing-page websites for small businesses, mostly with Elementor and some with custom WordPress themes}
+        \resumeItem{Migrated 6 client websites to new hosting, taking over from previous IT providers and handing full ownership back to the owners}
+        \resumeItem{Collaborated directly with clients to gather requirements and deliver production-ready websites}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Junior Software Engineer}{Apr 2021 -- Dec 2024}
+      {Dodobird.ai}{Part-time during studies until Apr 2023}
+      \resumeItemListStart
+        \resumeItem{Built e-commerce plugins for WordPress, Shopify and nopCommerce, including a WordPress plugin that displays AI product recommendations and embeds a Vue.js chatbot}
+        \resumeItem{Implemented full-stack features with Vue.js and Node.js (Express, TypeScript, PostgreSQL), including a queued bulk data import}
+        \resumeItem{Built a source-agnostic CRM data ingestion pipeline in Python with Kedro, scheduled with Apache Airflow, processing hundreds of thousands of records}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
 
-\section{Key Skills}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-     \textbf{Programming Languages}{: TypeScript, JavaScript, Python, C++, SQL, HTML, CSS} \\
-     \textbf{Frameworks \& Libraries}{: VueJS, NodeJS, Express, React, WordPress} \\
-     \textbf{Databases}{: PostgreSQL, MySQL} \\
-     \textbf{Tools \& Technologies}{: Apache Airflow, Kedro, BullMQ, MailHog, AWS, Git, Jupyter Notebook} \\
-     \textbf{Data Analysis}{: Pandas, Matplotlib, Business Intelligence} \\
-     \textbf{Specialisations}{: Full-stack development, Plugin development, Web scraping, Queue systems, Performance optimisation}
-    }}
- \end{itemize}
+\section{Projects}
+  \resumeItemListStart
+    \resumeItem{Prep: Nutrition and budget tracking app (in development), with receipt scanning and nutrition-label extraction built on Azure AI Content Understanding}
+    \resumeItem{Praline Recognition: Tool built to speed up café checkout. Identifies pralines from a photo with 93\% accuracy using Azure AI Content Understanding, matching against a text description of each praline, then shows the POS checkout steps to follow}
+    \resumeItem{\href{https://osinvoice.vercel.app}{\underline{OsInvoice}}: Invoicing app for sole traders that generates PDF invoices and drafts the client email automatically; used day to day for real sole-trader invoicing}
+    \resumeItem{\href{https://www.zetpa-mauritius.com}{\underline{Zetpa}}: Flutter surplus food marketplace for Mauritius (built, not currently operating), letting businesses sell unsold food at a third of the price at the end of the day to reduce food waste; integrated Peach Payments and Google Maps}
+    \resumeItem{\href{https://github.com/ReyJust/Mauritius_Forex}{\underline{Mauritius Forex}}: Scraper that collects Mauritian rupee exchange rates automatically every business day and serves them as a free, API-like dataset through GitHub raw content}
+  \resumeItemListEnd
+
+\section{Skills}
+  \resumeItemListStart
+    \resumeItem{\textbf{Programming:} TypeScript, JavaScript, Python, SQL, PHP, C\#}
+    \resumeItem{\textbf{Web:} Vue.js, React, Next.js, Node.js, FastAPI, PostgreSQL, Redis, BullMQ, WordPress}
+    \resumeItem{\textbf{Mobile:} Flutter, React Native, Google Maps, Peach Payments}
+    \resumeItem{\textbf{AI:} LangChain, OpenAI and Claude SDKs, Azure AI Foundry, Azure AI Content Understanding}
+    \resumeItem{\textbf{Data Processing:} Python, Pandas, Jupyter Notebook, Kedro, Apache Airflow, web scraping}
+    \resumeItem{\textbf{Cloud \& DevOps:} AWS, Azure, Docker, CI/CD with GitHub Actions, OpenTelemetry, Grafana}
+    \resumeItem{\textbf{Strengths:} versatility, teamwork, proactive adoption of AI tools, quickly navigating and maintaining existing codebases, problem-solving, attention to detail and code quality}
+  \resumeItemListEnd
+
+\section{Education}
+  \resumeItemListStart
+    \item\small{\textbf{GitHub Actions (GH-200)} -- \textit{Microsoft} \hfill Nov 2026}
+    \item\small{\textbf{Azure AI Apps and Agents Developer Associate (AI-103)} -- \textit{Microsoft} \hfill Jul 2026}
+    \item\small{\textbf{Claude Code and Claude API courses} -- \textit{Anthropic Academy} \hfill Jun 2026}
+    \item\small{\textbf{Bachelor of Computer Science, First Class Honours} -- \textit{Middlesex University} \hfill 2020 -- 2023}
+  \resumeItemListEnd
+
+\section{Languages}
+  \resumeItemListStart
+    \resumeItem{French (native)}
+    \resumeItem{English (proficient)}
+    \resumeItem{Mauritian Creole (fluent)}
+  \resumeItemListEnd
+
+\section{Hobbies \& Interests}
+  \resumeItemListStart
+    \resumeItem{Running: currently training for a marathon}
+    \resumeItem{Scouting: currently assisting the Assistant Scout Leader}
+    \resumeItem{Cooking \& Baking}
+    \resumeItem{Health, Fitness \& Nutrition}
+  \resumeItemListEnd
 
 \end{document}
