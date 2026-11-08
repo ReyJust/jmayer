@@ -45,7 +45,7 @@
 \ifPDFTeX\pdfgentounicode=1\fi
 
 \newcommand{\resumeItem}[1]{
-  \item\small{
+  \item\justifying\small{
     {#1 \vspace{-2pt}}
   }
 }
@@ -78,6 +78,8 @@
     \end{tabular*}\vspace{-7pt}
 }
 
+\newcommand{\hobbyIcon}[1]{\makebox[1.7em][l]{\raisebox{-0.1\height}{\normalsize #1}}}
+
 \newcommand{\resumeSingleHeading}[2]{
   \vspace{-2pt}\item
     \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
@@ -97,16 +99,16 @@
 
 \begin{document}
 
-\newcommand{\contactIcon}[1]{\makebox[1.7em][l]{\raisebox{-0.15\height}{\large #1}}}
+\newcommand{\contactIcon}[1]{\makebox[1.7em][l]{\raisebox{-0.15\height}{\Large #1}}}
 \begin{minipage}[c]{1.15in}
     \includegraphics[width=1.15in, height=1.15in, keepaspectratio]{resume_photo.jpg}
 \end{minipage}%
 \hspace{0.25in}%
 \begin{minipage}[c]{\dimexpr\textwidth-1.4in\relax}
-    {\Huge \scshape Justin Mayer} \\[2pt]
-    {\Large \textit{Software Engineer}} \\[6pt]
-    \small
-    \begin{tabular}{@{}p{2.4in}l@{}}
+    \centering
+    {\Huge \scshape Justin Mayer} {\Large \ -- \textit{Software Engineer}} \\[6pt]
+    \large
+    \begin{tabular}{@{}l@{\hspace{2.5em}}l@{}}
       \contactIcon{\faPhone} +230 5921 3244 &
       \href{mailto:jusmayer@outlook.com}{\contactIcon{\faEnvelope} jusmayer@outlook.com} \\[2pt]
       \href{https://www.linkedin.com/in/jpjmayer/}{\contactIcon{\faLinkedin} jpjmayer} &
@@ -131,13 +133,14 @@
       {LeadsCloser.ai}{}
       \resumeItemListStart
         \resumeItem{Led frontend refactor of a web application using modern UI frameworks (shadcn/ui), improving maintainability and UX consistency}
-        \resumeItem{Containerized the application with Docker, simplifying CI/CD pipelines and making environments quick to set up and reproduce}
-        \resumeItem{Implemented OpenTelemetry across the stack with a self-hosted Grafana LGTM backend (Prometheus, Tempo, Loki), tracing requests end to end across interconnected services and adding alerts that sped up debugging and improved uptime}
+        \resumeItem{Containerized the application with Docker to simplify CI/CD, and handled production deployments, including rolling out Prisma migrations on PostgreSQL and recovering from failed ones}
+        \resumeItem{Implemented OpenTelemetry across 3 interconnected systems with a self-hosted Grafana LGTM backend (Prometheus, Tempo, Loki), unifying their logs into single end-to-end traces and adding alerts that sped up debugging and improved uptime}
         \resumeItem{Designed and improved distributed background processing using BullMQ and Redis for asynchronous processing of thousands of emails daily}
         \resumeItem{Built APIs and LangChain tools for an AI-powered chatbot (Python, FastAPI) with a Vue.js frontend, working across the full conversation cycle from user message to tool calls and response}
         \resumeItem{Optimized backend performance through SQL procedure development, in-database cron jobs, and query tuning, improving dashboard performance by 50\%}
         \resumeItem{Developed scalable web scraping pipelines to extract data from dozens of websites in parallel}
         \resumeItem{Developed Oracle APEX applications, writing SQL procedures and backend logic}
+        \resumeItem{Resolved client-reported bugs through a ticketing system, communicating directly with clients from report to fix}
       \resumeItemListEnd
 
     \resumeSubheading
@@ -146,7 +149,7 @@
       \resumeItemListStart
         \resumeItem{Built around 8 landing-page websites for small businesses, mostly with Elementor and some with custom WordPress themes}
         \resumeItem{Migrated 6 client websites to new hosting, taking over from previous IT providers and handing full ownership back to the owners}
-        \resumeItem{Collaborated directly with clients to gather requirements and deliver production-ready websites}
+        \resumeItem{Turned provided Figma designs into responsive, production-ready websites}
       \resumeItemListEnd
 
     \resumeSubheading
@@ -162,17 +165,17 @@
 
 \section{Projects}
   \resumeItemListStart
-    \resumeItem{Prep: Nutrition and budget tracking app (in development), with receipt scanning and nutrition-label extraction built on Azure AI Content Understanding}
-    \resumeItem{Praline Recognition: Tool built to speed up café checkout. Identifies pralines from a photo with 93\% accuracy using Azure AI Content Understanding, matching against a text description of each praline, then shows the POS checkout steps to follow}
-    \resumeItem{\href{https://osinvoice.vercel.app}{\underline{OsInvoice}}: Invoicing app for sole traders that generates PDF invoices and drafts the client email automatically; used day to day for real sole-trader invoicing}
-    \resumeItem{\href{https://www.zetpa-mauritius.com}{\underline{Zetpa}}: Flutter surplus food marketplace for Mauritius (built, not currently operating), letting businesses sell unsold food at a third of the price at the end of the day to reduce food waste; integrated Peach Payments and Google Maps}
-    \resumeItem{\href{https://github.com/ReyJust/Mauritius_Forex}{\underline{Mauritius Forex}}: Scraper that collects Mauritian rupee exchange rates automatically every business day and serves them as a free, API-like dataset through GitHub raw content}
+    \resumeItem{\textbf{Praline Recognition:} Tool built to speed up checkout at an Australian café and chocolatier. Identifies pralines from a photo with 93\% accuracy using Azure AI Content Understanding, matching against a text description of each praline, then shows the POS checkout steps to follow}
+    \resumeItem{\textbf{Prep:} Nutrition and budget tracking app (in development), with receipt scanning and nutrition-label extraction built on Azure AI Content Understanding}
+    \resumeItem{\textbf{\href{https://www.zetpa-mauritius.com}{\underline{Zetpa}}:} Flutter surplus food marketplace for Mauritius (built, not currently operating), letting businesses sell unsold food at a third of the price at the end of the day to reduce food waste; integrated Peach Payments and Google Maps}
+    \resumeItem{\textbf{\href{https://osinvoice.vercel.app}{\underline{OsInvoice}}:} Invoicing app for sole traders that generates PDF invoices and drafts the client email automatically; used day to day for real sole-trader invoicing}
+    \resumeItem{\textbf{\href{https://github.com/ReyJust/Mauritius_Forex}{\underline{Mauritius Forex}}:} Scraper that collects Mauritian rupee exchange rates automatically every business day and serves them as a free, API-like dataset through GitHub raw content}
   \resumeItemListEnd
 
 \section{Skills}
   \resumeItemListStart
     \resumeItem{\textbf{Programming:} TypeScript, JavaScript, Python, SQL, PHP, C\#}
-    \resumeItem{\textbf{Web:} Vue.js, React, Next.js, Node.js, FastAPI, PostgreSQL, Redis, BullMQ, WordPress}
+    \resumeItem{\textbf{Web:} Vue.js, React, Next.js, Node.js, FastAPI, PostgreSQL, Prisma, Redis, BullMQ, WordPress}
     \resumeItem{\textbf{Mobile:} Flutter, React Native, Google Maps, Peach Payments}
     \resumeItem{\textbf{AI:} LangChain, OpenAI and Claude SDKs, Azure AI Foundry, Azure AI Content Understanding}
     \resumeItem{\textbf{Data Processing:} Python, Pandas, Jupyter Notebook, Kedro, Apache Airflow, web scraping}
@@ -185,22 +188,23 @@
     \item\small{\textbf{GitHub Actions (GH-200)} -- \textit{Microsoft} \hfill Nov 2026}
     \item\small{\textbf{Azure AI Apps and Agents Developer Associate (AI-103)} -- \textit{Microsoft} \hfill Jul 2026}
     \item\small{\textbf{Claude Code and Claude API courses} -- \textit{Anthropic Academy} \hfill Jun 2026}
-    \item\small{\textbf{Bachelor of Computer Science, First Class Honours} -- \textit{Middlesex University} \hfill 2020 -- 2023}
+    \item\small{\textbf{Bachelor of Computer Science, First Class Honours} -- \textit{Middlesex University} \hfill Oct 2020 -- Apr 2023}
   \resumeItemListEnd
 
 \section{Languages}
   \resumeItemListStart
-    \resumeItem{French (native)}
-    \resumeItem{English (proficient)}
-    \resumeItem{Mauritian Creole (fluent)}
+    \resumeItem{French (Native)}
+    \resumeItem{English (Proficient)}
+    \resumeItem{Mauritian Creole (Fluent)}
   \resumeItemListEnd
 
 \section{Hobbies \& Interests}
-  \resumeItemListStart
-    \resumeItem{Running: currently training for a marathon}
-    \resumeItem{Scouting: currently assisting the Assistant Scout Leader}
-    \resumeItem{Cooking \& Baking}
-    \resumeItem{Health, Fitness \& Nutrition}
-  \resumeItemListEnd
+  {\centering\small
+  \begin{tabular}{@{}l@{\hspace{5em}}l@{}}
+    \hobbyIcon{\faRunning} \textbf{Running} &
+    \hobbyIcon{\faCampground} \textbf{Scouting:} Assistant Scout Leader \\[2pt]
+    \hobbyIcon{\faUtensils} \textbf{Cooking \& Baking} &
+    \hobbyIcon{\faHeartbeat} \textbf{Health, Fitness \& Nutrition} \\
+  \end{tabular}\par}
 
 \end{document}

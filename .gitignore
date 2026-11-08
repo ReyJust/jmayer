@@ -24,6 +24,6 @@ build/
 *.sln
 *.sw?
 
-# LaTeX build output (root only; src/assets/resume.pdf stays tracked)
-/resume.pdf
+# LaTeX build output (src/assets/resume.pdf stays tracked)
+/resume/resume.pdf
 *.synctex.gz
